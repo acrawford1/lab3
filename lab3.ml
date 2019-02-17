@@ -59,10 +59,9 @@ Implement a function add_point_recd to add two points of type
 point_recd and returning a point _rec as well.
 ......................................................................*)
 
-let add_point_recd (p1: point_recd) (p2: point_recd): point_recd =
-  match p1, p2 with
-  | {x = x1; y = y1;},{x = x2; y = y2;} -> {x1 + x2, y1 + y2}
-;;
+let add_point_recd (p1 : point_recd) (p2 : point_recd) : point_recd =
+	let {x = x1; y = y1}, {x = x2; y = y2} = p1, p2
+	 in {x = x1 + x2; y = y1 + y2} ;;
 
 (* Recall the dot product from Lab 2. The dot product of two points
 (x1, y1) and (x2, y2) is the sum of the products of their x and y
